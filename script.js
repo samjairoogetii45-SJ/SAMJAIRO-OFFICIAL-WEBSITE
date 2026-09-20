@@ -1,518 +1,227 @@
-:root {
-  --primary: #7c3aed;
-  --primary-dark: #5b21b6;
-  --bg: #0f172a;
-  --bg-soft: #111827;
-  --panel: #1f2937;
-  --panel-alt: #0b1220;
-  --text: #e5eefc;
-  --muted: #a8bbd6;
-  --line: rgba(148, 163, 184, 0.2);
-  --accent: #22c55e;
-  --warning: #f59e0b;
-  --shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  background: linear-gradient(180deg, #040b16 0%, #0b1220 100%);
-  color: var(--text);
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img,
-video {
-  max-width: 100%;
-  display: block;
-}
-
-button,
-input,
-textarea {
-  font: inherit;
-}
-
-.container {
-  width: min(1120px, calc(100% - 2rem));
-  margin: 0 auto;
-}
-
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  backdrop-filter: blur(14px);
-  background: rgba(11, 18, 32, 0.72);
-  border-bottom: 1px solid var(--line);
-}
-
-.nav-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  min-height: 76px;
-  gap: 1rem;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--primary), #8b5cf6);
-  font-weight: 800;
-  font-size: 1.2rem;
-}
-
-.brand-name {
-  display: block;
-  font-size: 1.1rem;
-  font-weight: 800;
-}
-
-.brand small {
-  display: block;
-  color: var(--muted);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.62rem;
-}
-
-.main-nav {
-  display: flex;
-  align-items: center;
-  gap: 1.3rem;
-  color: var(--muted);
-}
-
-.main-nav a {
-  transition: color 0.2s ease;
-}
-
-.main-nav a:hover,
-.text-link:hover {
-  color: #fff;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  padding: 0.9rem 1.4rem;
-  border: 1px solid transparent;
-  font-weight: 700;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  cursor: pointer;
-}
-
-.button:hover {
-  transform: translateY(-1px);
-}
-
-.button-primary {
-  background: linear-gradient(135deg, var(--primary), #8b5cf6);
-  color: #fff;
-  box-shadow: var(--shadow);
-}
-
-.button-secondary {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: var(--line);
-  color: var(--text);
-}
-
-.hero {
-  padding: 4.5rem 0 3rem;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.eyebrow {
-  display: inline-block;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  font-weight: 700;
-  color: #c4b5fd;
-  margin-bottom: 1rem;
-}
-
-.hero-copy h1,
-.section-head h2,
-.about-copy h2 {
-  margin: 0 0 1rem;
-  line-height: 1.08;
-}
-
-.hero-copy h1 {
-  font-size: clamp(2.5rem, 4vw, 4.4rem);
-  max-width: 600px;
-}
-
-.hero-copy p,
-.about-copy p,
-.info-box p,
-.feature-panel p {
-  color: var(--muted);
-  line-height: 1.7;
-}
-
-.cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.hero-stats {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  padding: 0;
-  margin: 0;
-}
-
-.hero-stats li {
-  min-width: 110px;
-}
-
-.hero-stats strong {
-  display: block;
-  font-size: 1.3rem;
-  margin-bottom: 0.3rem;
-}
-
-.hero-stats span {
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.hero-card {
-  background: rgba(148, 163, 184, 0.06);
-  border: 1px solid var(--line);
-  border-radius: 28px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.card-top {
-  background: rgba(124, 58, 237, 0.15);
-  display: flex;
-  gap: 0.6rem;
-  padding: 1rem 1.1rem;
-  border-bottom: 1px solid var(--line);
-}
-
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.feature-panel {
-  padding: 2rem;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.8));
-}
-
-.mini-label {
-  display: inline-flex;
-  padding: 0.35rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(34, 197, 94, 0.14);
-  color: #86efac;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-weight: 700;
-}
-
-.feature-panel h3 {
-  font-size: clamp(1.5rem, 2vw, 2.1rem);
-  margin: 1rem 0 0.75rem;
-}
-
-.feature-badges {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.7rem;
-}
-
-.feature-badges span {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 0.55rem 0.9rem;
-  color: var(--muted);
-  font-size: 0.82rem;
-}
-
-.brands-strip {
-  background: rgba(148, 163, 184, 0.04);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 1rem 0;
-}
-
-.strip-grid {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  text-align: center;
-  color: var(--muted);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-}
-
-.content-section {
-  padding: 5rem 0;
-}
-
-.alt-bg {
-  background: rgba(148, 163, 184, 0.03);
-}
-
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 1rem;
-  margin-bottom: 2rem;
-}
-
-.section-head h2,
-.about-copy h2 {
-  font-size: clamp(2.1rem, 3vw, 3rem);
-}
-
-.text-link {
-  color: #d8b4fe;
-  font-weight: 600;
-}
-
-.news-grid,
-.video-grid,
-.about-wrap,
-.admin-grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.news-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.news-card,
-.video-card,
-.info-box,
-.panel-form {
-  background: rgba(17, 24, 39, 0.8);
-  border: 1px solid var(--line);
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.news-card {
-  display: flex;
-  flex-direction: column;
-}
-
-.news-card img {
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: #111827;
-}
-
-.news-body {
-  padding: 1.4rem 1.2rem 1.3rem;
-}
-
-.meta-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.75rem;
-  color: #c4b5fd;
-  font-size: 0.78rem;
-  margin-bottom: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.news-card h3,
-.video-card h3,
-.info-box h3 {
-  margin: 0 0 0.7rem;
-  font-size: 1.35rem;
-}
-
-.news-card p,
-.video-card p {
-  color: var(--muted);
-  line-height: 1.7;
-  margin: 0;
-}
-
-.video-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.video-card {
-  padding-bottom: 1rem;
-}
-
-.video-frame {
-  background: #0b1220;
-  border-bottom: 1px solid var(--line);
-  min-height: 220px;
-}
-
-.video-frame iframe,
-.video-frame video {
-  width: 100%;
-  min-height: 220px;
-  height: 100%;
-  border: 0;
-  background: #020817;
-}
-
-.video-body {
-  padding: 1rem 1.2rem 0.2rem;
-}
-
-.about-wrap {
-  grid-template-columns: 1fr 1.2fr;
-  align-items: center;
-}
-
-.about-boxes {
-  display: grid;
-  gap: 1rem;
-}
-
-.info-box {
-  padding: 1.35rem 1.4rem;
-}
-
-.admin-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.panel-form {
-  padding: 1.5rem;
-}
-
-.panel-form h3 {
-  margin: 0 0 1.3rem;
-  font-size: 1.5rem;
-}
-
-label {
-  display: block;
-  margin-bottom: 1rem;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-input,
-textarea {
-  width: 100%;
-  margin-top: 0.4rem;
-  background: rgba(148, 163, 184, 0.04);
-  color: var(--text);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 0.9rem 1rem;
-  resize: vertical;
-}
-
-input::placeholder,
-textarea::placeholder {
-  color: #94a3b8;
-}
-
-input:focus,
-textarea:focus {
-  outline: 2px solid rgba(124, 58, 237, 0.35);
-  border-color: rgba(124, 58, 237, 0.7);
-}
-
-.site-footer {
-  border-top: 1px solid var(--line);
-  padding: 2rem 0 3rem;
-  background: rgba(2, 6, 23, 0.7);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 1fr;
-  gap: 1rem;
-}
-
-.footer-brand {
-  margin-top: 0.5rem;
-}
-
-.site-footer h3 {
-  margin-top: 0;
-}
-
-.site-footer p {
-  color: var(--muted);
-  line-height: 1.8;
-  margin: 0 0 0.25rem;
-}
-
-@media (max-width: 860px) {
-  .hero-grid,
-  .about-wrap,
-  .admin-grid,
-  .news-grid,
-  .video-grid,
-  .footer-grid {
-    grid-template-columns: 1fr;
+const newsStorageKey = "samjairoNews";
+const videoStorageKey = "samjairoVideos";
+
+const sampleNews = [
+  {
+    id: 1,
+    title: "Samjairo Launches New Community Update Campaign",
+    category: "Announcement",
+    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+    date: "2026-09-15",
+    summary: "A new community-driven campaign is bringing fresh updates, events, and stories to all fans.",
+    content:
+      "Samjairo is excited to introduce a new community update campaign designed to keep audiences informed and engaged. The campaign includes a stronger newsletter experience, feature highlights, and a more dynamic media presence across platforms."
+  },
+  {
+    id: 2,
+    title: "Behind the Scenes: Samjairo Media Production Week",
+    category: "Media",
+    image: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80",
+    date: "2026-09-10",
+    summary: "A look into the production process and the creative team shaping the next set of videos.",
+    content:
+      "This week, the Samjairo media team showcased a collaborative production cycle focused on storytelling, planning, and creative visual design. The team produced several concept drafts and recorded interviews to improve future content delivery."
+  },
+  {
+    id: 3,
+    title: "Samjairo Hosts First Public Q&A Session",
+    category: "Event",
+    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
+    date: "2026-09-02",
+    summary: "The first public Q&A brought fans together for questions, stories, and a direct community interaction.",
+    content:
+      "Fans joined the first Samjairo public Q&A session and asked important questions about upcoming announcements, visual direction, and community priorities. The event was designed to connect the audience and create a more authentic public presence."
+  }
+];
+
+const sampleVideos = [
+  {
+    id: 1,
+    title: "Samjairo Intro Reel",
+    category: "Featured",
+    description: "A short introduction highlighting the vision and direction of Samjairo.",
+    videoUrl: "https://www.youtube.com/embed/ScMzIvxBSi4?si=2n1RrdBPHF9nUMvY"
+  },
+  {
+    id: 2,
+    title: "Studio Update",
+    category: "Behind the Scenes",
+    description: "A quick look at the production environment and planning process behind future media content.",
+    videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    id: 3,
+    title: "Live Event Highlights",
+    category: "Event",
+    description: "A highlight reel from the recent public event and community engagement session.",
+    videoUrl: "https://www.youtube.com/embed/ysz5S6PUM-U"
+  }
+];
+
+function getSavedData(key, fallback) {
+  const stored = localStorage.getItem(key);
+
+  if (!stored) {
+    localStorage.setItem(key, JSON.stringify(fallback));
+    return fallback;
   }
 
-  .main-nav {
-    display: none;
+  try {
+    return JSON.parse(stored);
+  } catch (error) {
+    localStorage.setItem(key, JSON.stringify(fallback));
+    return fallback;
+  }
+}
+
+const newsItems = getSavedData(newsStorageKey, sampleNews);
+const videoItems = getSavedData(videoStorageKey, sampleVideos);
+
+function formatDate(dateString) {
+  if (!dateString) return "Recent";
+  const date = new Date(dateString);
+  return date.toLocaleDateString(undefined, {
+    month: "short",
+    day: "numeric",
+    year: "numeric"
+  });
+}
+
+function buildNewsCard(item) {
+  const image = item.image || "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=80";
+
+  return `
+    <article class="news-card">
+      <img src="${image}" alt="${item.title}" />
+      <div class="news-body">
+        <div class="meta-row">
+          <span>${item.category}</span>
+          <span>${formatDate(item.date)}</span>
+        </div>
+        <h3>${item.title}</h3>
+        <p>${item.summary}</p>
+      </div>
+    </article>
+  `;
+}
+
+function buildVideoMarkup(item) {
+  const isYouTube = /(?:youtube\.com|youtu\.be)/i.test(item.videoUrl || "");
+  let mediaMarkup = "";
+
+  if (isYouTube) {
+    const embedUrl = item.videoUrl.includes("embed/")
+      ? item.videoUrl
+      : item.videoUrl.replace("watch?v=", "embed/").replace("youtu.be/", "youtube.com/embed/");
+
+    mediaMarkup = `<iframe src="${embedUrl}" title="${item.title}" allowfullscreen></iframe>`;
+  } else {
+    mediaMarkup = `<video controls src="${item.videoUrl}"></video>`;
   }
 
-  .section-head {
-    align-items: start;
-    flex-direction: column;
+  return `
+    <article class="video-card">
+      <div class="video-frame">
+        ${mediaMarkup}
+      </div>
+      <div class="video-body">
+        <div class="meta-row">
+          <span>${item.category}</span>
+        </div>
+        <h3>${item.title}</h3>
+        <p>${item.description}</p>
+      </div>
+    </article>
+  `;
+}
+
+function renderNews() {
+  const list = document.getElementById("newsList");
+  list.innerHTML = newsItems.map(buildNewsCard).join("");
+}
+
+function renderVideos() {
+  const list = document.getElementById("videoList");
+  list.innerHTML = videoItems.map(buildVideoMarkup).join("");
+}
+
+function saveNews() {
+  localStorage.setItem(newsStorageKey, JSON.stringify(newsItems));
+}
+
+function saveVideos() {
+  localStorage.setItem(videoStorageKey, JSON.stringify(videoItems));
+}
+
+async function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function handleNewsSubmit(event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+
+  const newItem = {
+    id: Date.now(),
+    title: formData.get("title").toString().trim(),
+    category: formData.get("category").toString().trim(),
+    image: formData.get("image").toString().trim() || "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=80",
+    date: formData.get("date").toString(),
+    summary: formData.get("summary").toString().trim(),
+    content: formData.get("content").toString().trim()
+  };
+
+  newsItems.unshift(newItem);
+  saveNews();
+  renderNews();
+  form.reset();
+}
+
+async function handleVideoSubmit(event) {
+  event.preventDefault();
+
+  const form = event.currentTarget;
+  const formData = new FormData(form);
+  const file = formData.get("videoFile");
+  const url = formData.get("videoUrl").toString().trim();
+
+  let videoUrl = url;
+
+  if (file && file.size > 0) {
+    videoUrl = await readFileAsDataUrl(file);
   }
 
-  .strip-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+  const newVideo = {
+    id: Date.now(),
+    title: formData.get("title").toString().trim(),
+    category: formData.get("category").toString().trim(),
+    description: formData.get("description").toString().trim(),
+    videoUrl
+  };
+
+  videoItems.unshift(newVideo);
+  saveVideos();
+  renderVideos();
+  form.reset();
+}
+
+const newsForm = document.getElementById("newsForm");
+const videoForm = document.getElementById("videoForm");
+
+newsForm.addEventListener("submit", handleNewsSubmit);
+videoForm.addEventListener("submit", handleVideoSubmit);
+
+renderNews();
+renderVideos();
+
+const defaultDate = document.querySelector('input[name="date"]');
+if (defaultDate) {
+  defaultDate.valueAsDate = new Date();
 }
