@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Samjairo Intro Reel",
+    "category": "Featured",
+    "description": "A short introduction highlighting the vision and direction of Samjairo.",
+    "videoUrl": "https://www.youtube.com/embed/ScMzIvxBSi4?si=2n1RrdBPHF9nUMvY"
+  },
+  {
+    "id": 2,
+    "title": "Studio Update",
+    "category": "Behind the Scenes",
+    "description": "A quick look at the production environment and planning process behind future media content.",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+  },
+  {
+    "id": 3,
+    "title": "Live Event Highlights",
+    "category": "Event",
+    "description": "A highlight reel from the recent public event and community engagement session.",
+    "videoUrl": "https://www.youtube.com/embed/ysz5S6PUM-U"
+  }
+]

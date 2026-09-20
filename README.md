@@ -1,36 +1,42 @@
 # Samjairo Official Website
 
-A simple but polished official website for Samjairo featuring: 
-- News and announcements section
-- Video gallery
-- Admin form to add news and videos
-- Responsive design for mobile and desktop
-- Browser-based storage for content persistence
+A complete Samjairo official website with:
+- news and announcement cards
+- video gallery
+- admin forms to publish content
+- real backend API for storing news and uploaded videos
+- responsive layout for mobile and desktop
 
 ## Run locally
 
-Open `index.html` directly in a browser.
-
-If you want a local server:
+1. Install dependencies:
 
 ```bash
-python3 -m http.server 8000
+npm install
 ```
 
-Then open:
+2. Start the server:
+
+```bash
+npm start
+```
+
+3. Open the site:
 
 ```text
-http://localhost:8000
+http://localhost:3000
 ```
 
-## Files
+## Project structure
 
-- `index.html` — site layout
-- `styles.css` — styling
-- `script.js` — dynamic content and form handling
+- `server.js` — Express backend and API endpoints
+- `index.html` — homepage layout
+- `styles.css` — website styling
+- `script.js` — frontend logic for loading and posting content
+- `data/news.json` — saved news posts
+- `data/videos.json` — saved videos
+- `uploads/videos/` — uploaded video files
 
 ## Notes
 
-The site currently stores content in the browser's localStorage, so newly posted news and videos remain after refresh on the same browser.
-
-For a production-ready CMS with real database storage, the next step is to connect this frontend to a backend such as Node.js + Express or Firebase.
+This version saves data on the server rather than only in browser localStorage, so the website is much closer to a real content-management website.

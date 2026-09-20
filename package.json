@@ -1,0 +1,21 @@
+{
+  "name": "samjairo-official-website",
+  "version": "1.0.0",
+  "description": "Samjairo official website with news posting and video uploads.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "samjairo",
+    "news",
+    "video",
+    "website"
+  ],
+  "author": "Samjairo",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "title": "Samjairo Launches New Community Update Campaign",
+    "category": "Announcement",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80",
+    "date": "2026-09-15",
+    "summary": "A new community-driven campaign is bringing fresh updates, events, and stories to all fans.",
+    "content": "Samjairo is excited to introduce a new community update campaign designed to keep audiences informed and engaged. The campaign includes a stronger newsletter experience, feature highlights, and a more dynamic media presence across platforms."
+  },
+  {
+    "id": 2,
+    "title": "Behind the Scenes: Samjairo Media Production Week",
+    "category": "Media",
+    "image": "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=900&q=80",
+    "date": "2026-09-10",
+    "summary": "A look into the production process and the creative team shaping the next set of videos.",
+    "content": "This week, the Samjairo media team showcased a collaborative production cycle focused on storytelling, planning, and creative visual design. The team produced several concept drafts and recorded interviews to improve future content delivery."
+  },
+  {
+    "id": 3,
+    "title": "Samjairo Hosts First Public Q&A Session",
+    "category": "Event",
+    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80",
+    "date": "2026-09-02",
+    "summary": "The first public Q&A brought fans together for questions, stories, and a direct community interaction.",
+    "content": "Fans joined the first Samjairo public Q&A session and asked important questions about upcoming announcements, visual direction, and community priorities. The event was designed to connect the audience and create a more authentic public presence."
+  }
+]
