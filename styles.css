@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samjairo Official Website</title>
+    <meta
+      name="description"
+      content="Samjairo official news and media website featuring the latest updates, announcements, and video content."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <div>
+            <span class="brand-name">Samjairo</span>
+            <small>Official</small>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#news">News</a>
+          <a href="#videos">Videos</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <a class="button button-primary" href="#admin">Manage</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Official updates</span>
+            <h1>News, stories, and videos from Samjairo.</h1>
+            <p>
+              Welcome to the official Samjairo platform where fans and audiences can stay informed,
+              discover fresh updates, and watch the latest video content.
+            </p>
+            <div class="cta-row">
+              <a href="#news" class="button button-primary">Latest News</a>
+              <a href="#videos" class="button button-secondary">Watch Videos</a>
+            </div>
+            <ul class="hero-stats">
+              <li><strong>24/7</strong><span>News feed</span></li>
+              <li><strong>Weekly</strong><span>Content updates</span></li>
+              <li><strong>HD</strong><span>Video library</span></li>
+            </ul>
+          </div>
+
+          <div class="hero-card">
+            <div class="card-top">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
+            <div class="feature-panel">
+              <span class="mini-label">Featured</span>
+              <h3>Samjairo Spotlight</h3>
+              <p>
+                Discover what is happening now, from events and updates to exclusive videos and news stories.
+              </p>
+              <div class="feature-badges">
+                <span>News</span>
+                <span>Videos</span>
+                <span>Media</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="brands-strip">
+        <div class="container strip-grid">
+          <span>Community</span>
+          <span>Updates</span>
+          <span>Projects</span>
+          <span>Media</span>
+          <span>Events</span>
+        </div>
+      </section>
+
+      <section id="news" class="content-section">
+        <div class="container section-head">
+          <div>
+            <span class="eyebrow">Latest stories</span>
+            <h2>News & Announcements</h2>
+          </div>
+          <a href="#admin" class="text-link">Post new article</a>
+        </div>
+
+        <div id="newsList" class="news-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="videos" class="content-section alt-bg">
+        <div class="container section-head">
+          <div>
+            <span class="eyebrow">Watch now</span>
+            <h2>Video Gallery</h2>
+          </div>
+          <a href="#admin" class="text-link">Upload a video</a>
+        </div>
+
+        <div id="videoList" class="video-grid" aria-live="polite"></div>
+      </section>
+
+      <section id="about" class="content-section">
+        <div class="container about-wrap">
+          <div class="about-copy">
+            <span class="eyebrow">About Samjairo</span>
+            <h2>Built to inform and engage the audience.</h2>
+            <p>
+              Samjairo Official Website is a modern digital home for publishing news, highlighting events,
+              sharing interviews, and showcasing video content in a clean and engaging experience.
+            </p>
+            <p>
+              This site is designed to help you share updates quickly, keep your audience connected, and
+              present all your media in one place.
+            </p>
+          </div>
+
+          <div class="about-boxes">
+            <div class="info-box">
+              <h3>News Posting</h3>
+              <p>Add new stories, announcements, and updates with a few clicks.</p>
+            </div>
+            <div class="info-box">
+              <h3>Video Uploads</h3>
+              <p>Showcase clips, interviews, promos, and highlights in a gallery.</p>
+            </div>
+            <div class="info-box">
+              <h3>Easy Management</h3>
+              <p>Manage content from the built-in admin form and publish instantly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admin" class="content-section admin-section">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow">Admin area</span>
+              <h2>Manage content</h2>
+            </div>
+          </div>
+
+          <div class="admin-grid">
+            <form id="newsForm" class="panel-form">
+              <h3>Publish News</h3>
+
+              <label>
+                Title
+                <input type="text" name="title" placeholder="Samjairo launches a new campaign" required />
+              </label>
+
+              <label>
+                Category
+                <input type="text" name="category" placeholder="Announcement" required />
+              </label>
+
+              <label>
+                Cover Image URL
+                <input type="url" name="image" placeholder="https://example.com/image.jpg" />
+              </label>
+
+              <label>
+                Publish Date
+                <input type="date" name="date" required />
+              </label>
+
+              <label>
+                Short Summary
+                <textarea name="summary" rows="3" placeholder="Write a short summary of the news" required></textarea>
+              </label>
+
+              <label>
+                Full Content
+                <textarea name="content" rows="5" placeholder="Add the full article content" required></textarea>
+              </label>
+
+              <button type="submit" class="button button-primary">Add News</button>
+            </form>
+
+            <form id="videoForm" class="panel-form">
+              <h3>Upload Video</h3>
+
+              <label>
+                Title
+                <input type="text" name="title" placeholder="New Samjairo video update" required />
+              </label>
+
+              <label>
+                Category
+                <input type="text" name="category" placeholder="Video Update" required />
+              </label>
+
+              <label>
+                Video URL (YouTube or MP4)
+                <input type="url" name="videoUrl" placeholder="https://www.youtube.com/watch?v=..." />
+              </label>
+
+              <label>
+                Or upload local video
+                <input type="file" name="videoFile" accept="video/*" />
+              </label>
+
+              <label>
+                Description
+                <textarea name="description" rows="4" placeholder="Describe the video" required></textarea>
+              </label>
+
+              <button type="submit" class="button button-primary">Add Video</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <div class="brand footer-brand">
+            <div class="brand-mark">S</div>
+            <div>
+              <span class="brand-name">Samjairo</span>
+              <small>Official</small>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <p>Email: hello@samjairo.com</p>
+          <p>Phone: +123 456 7890</p>
+        </div>
+
+        <div>
+          <h3>Follow</h3>
+          <p><a href="#">Instagram</a></p>
+          <p><a href="#">YouTube</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
